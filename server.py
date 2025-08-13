@@ -13,7 +13,7 @@ def emotion_detector_route():
     Recieves user text, calls emotion_detector, 
     and returns response or error message.
     """
-    text_to_analyze = request.values.get('text')
+    text_to_analyze = request.values.get('textToAnalyze')
     result = emotion_detector(text_to_analyze)
 
     if result is None or result.get("dominant_emotion") is None:
